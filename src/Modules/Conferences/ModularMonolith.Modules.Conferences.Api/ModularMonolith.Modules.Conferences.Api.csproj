@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Shared\ModularMonolith.Shared.Infrastructure\ModularMonolith.Shared.Infrastructure.csproj" />
+    <ProjectReference Include="..\ModularMonolith.Modules.Conferences.Core\ModularMonolith.Modules.Conferences.Core.csproj" />
+  </ItemGroup>
+
+</Project>
