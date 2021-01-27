@@ -1,4 +1,32 @@
 @url = http://localhost:5000/conferences-module
+@hostId = 8a579bc9-46f3-4021-8a0d-979449fb3b81
 
 ###
 GET {{url}}
+
+###
+GET {{url}}/hosts
+
+###
+GET {{url}}/hosts/{{hostId}}
+
+###
+POST {{url}}/hosts
+Content-Type: application/json
+
+{
+  "name": "Host 1",
+  "description": "Lorem ipsum"
+}
+
+###
+PUT {{url}}/hosts/{{hostId}}
+Content-Type: application/json
+
+{
+  "name": "Host 2",
+  "description": "Lorem ipsum"
+}
+
+###
+DELETE {{url}}/hosts/{{hostId}}

@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using ModularMonolith.Modules.Conferences.Api;
 using ModularMonolith.Shared.Infrastructure;
 
@@ -18,11 +17,6 @@ namespace ModularMonolith.Bootstrapper
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-
             app.UseInfrastructure();
             app.UseRouting();
             app.UseConferencesModule();
