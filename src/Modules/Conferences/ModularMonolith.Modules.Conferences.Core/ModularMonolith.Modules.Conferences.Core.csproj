@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Shared\ModularMonolith.Shared.Abstractions\ModularMonolith.Shared.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\Shared\ModularMonolith.Shared.Infrastructure\ModularMonolith.Shared.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
