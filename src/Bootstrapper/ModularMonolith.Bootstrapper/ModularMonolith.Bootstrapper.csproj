@@ -6,10 +6,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Modules\Conferences\ModularMonolith.Modules.Conferences.Api\ModularMonolith.Modules.Conferences.Api.csproj" />
+    <ProjectReference Include="..\..\Modules\Speakers\ModularMonolith.Modules.Speakers.Api\ModularMonolith.Modules.Speakers.Api.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.3">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.5">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>

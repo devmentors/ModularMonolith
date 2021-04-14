@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using ModularMonolith.Modules.Conferences.Api;
+using ModularMonolith.Modules.Speakers.Api;
 using ModularMonolith.Shared.Infrastructure;
 
 namespace ModularMonolith.Bootstrapper
@@ -13,6 +14,7 @@ namespace ModularMonolith.Bootstrapper
         {
             services.AddInfrastructure();
             services.AddConferencesModule();
+            services.AddSpeakersModule();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -20,6 +22,7 @@ namespace ModularMonolith.Bootstrapper
             app.UseInfrastructure();
             app.UseRouting();
             app.UseConferencesModule();
+            app.UseSpeakersModule();
             
             app.UseEndpoints(endpoints =>
             {

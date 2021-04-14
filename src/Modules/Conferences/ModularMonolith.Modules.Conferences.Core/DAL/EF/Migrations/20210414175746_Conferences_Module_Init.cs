@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ModularMonolith.Modules.Conferences.Core.DAL.EF.Migrations
 {
-    public partial class Conferences_Module_init : Migration
+    public partial class Conferences_Module_Init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

@@ -10,8 +10,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace ModularMonolith.Modules.Conferences.Core.DAL.EF.Migrations
 {
     [DbContext(typeof(ConferencesDbContext))]
-    [Migration("20210217210128_Conferences_Module_init")]
-    partial class Conferences_Module_init
+    [Migration("20210414175746_Conferences_Module_Init")]
+    partial class Conferences_Module_Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -19,7 +19,7 @@ namespace ModularMonolith.Modules.Conferences.Core.DAL.EF.Migrations
             modelBuilder
                 .HasDefaultSchema("conferences")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63)
-                .HasAnnotation("ProductVersion", "5.0.3")
+                .HasAnnotation("ProductVersion", "5.0.5")
                 .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
             modelBuilder.Entity("ModularMonolith.Modules.Conferences.Core.Entities.Conference", b =>

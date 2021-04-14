@@ -2,6 +2,8 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using ModularMonolith.Modules.Conferences.Core.DAL;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace ModularMonolith.Modules.Conferences.Core.DAL.EF.Migrations
@@ -15,7 +17,7 @@ namespace ModularMonolith.Modules.Conferences.Core.DAL.EF.Migrations
             modelBuilder
                 .HasDefaultSchema("conferences")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63)
-                .HasAnnotation("ProductVersion", "5.0.3")
+                .HasAnnotation("ProductVersion", "5.0.5")
                 .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
             modelBuilder.Entity("ModularMonolith.Modules.Conferences.Core.Entities.Conference", b =>
