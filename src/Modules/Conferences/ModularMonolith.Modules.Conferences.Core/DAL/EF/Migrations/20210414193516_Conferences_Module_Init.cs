@@ -21,7 +21,8 @@ namespace ModularMonolith.Modules.Conferences.Core.DAL.EF.Migrations
                     Description = table.Column<string>(type: "text", nullable: true),
                     Location = table.Column<string>(type: "text", nullable: true),
                     From = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
-                    To = table.Column<DateTime>(type: "timestamp without time zone", nullable: false)
+                    To = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
+                    ParticipantsLimit = table.Column<int>(type: "integer", nullable: true)
                 },
                 constraints: table =>
                 {

@@ -41,6 +41,9 @@ namespace ModularMonolith.Modules.Conferences.Core.DAL.EF.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("text");
 
+                    b.Property<int?>("ParticipantsLimit")
+                        .HasColumnType("integer");
+
                     b.Property<DateTime>("To")
                         .HasColumnType("timestamp without time zone");
 

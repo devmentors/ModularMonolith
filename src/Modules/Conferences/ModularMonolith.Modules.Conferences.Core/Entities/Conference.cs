@@ -11,5 +11,6 @@ namespace ModularMonolith.Modules.Conferences.Core.Entities
         public string Location { get; set; }
         public DateTime From { get; set; }
         public DateTime To { get; set; }
+        public int? ParticipantsLimit { get; set; }
     }
 }

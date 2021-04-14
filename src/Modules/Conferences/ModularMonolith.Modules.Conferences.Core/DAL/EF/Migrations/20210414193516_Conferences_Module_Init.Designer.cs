@@ -10,7 +10,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace ModularMonolith.Modules.Conferences.Core.DAL.EF.Migrations
 {
     [DbContext(typeof(ConferencesDbContext))]
-    [Migration("20210414175746_Conferences_Module_Init")]
+    [Migration("20210414193516_Conferences_Module_Init")]
     partial class Conferences_Module_Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -42,6 +42,9 @@ namespace ModularMonolith.Modules.Conferences.Core.DAL.EF.Migrations
 
                     b.Property<string>("Name")
                         .HasColumnType("text");
+
+                    b.Property<int?>("ParticipantsLimit")
+                        .HasColumnType("integer");
 
                     b.Property<DateTime>("To")
                         .HasColumnType("timestamp without time zone");
