@@ -13,10 +13,11 @@ namespace ModularMonolith.Modules.Tickets.Core.Events.External.Handlers
             _logger = logger;
         }
         
-        public Task HandleAsync(ConferenceCreated @event)
+        public async Task HandleAsync(ConferenceCreated @event)
         {
+            // long-time running process
+            await Task.Delay(10_000);
             _logger.LogInformation($"Received event about created conference with ID: {@event.Id}");
-            return Task.CompletedTask;
         }
     }
 }

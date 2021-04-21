@@ -8,7 +8,16 @@ namespace ModularMonolith.Shared.Infrastructure.Messaging
         public static IServiceCollection AddMessaging(this IServiceCollection services)
         {
             services.AddSingleton<IMessageBroker, InMemoryMessageBroker>();
+            services.AddSingleton<IMessageChannel, MessageChannel>();
+            services.AddSingleton<IAsyncMessageDispatcher, AsyncMessageDispatcher>();
+            var options = services.GetOptions<MessagingOptions>("messaging");
+            services.AddSingleton(options);
 
+            if (options.UseBackgroundDispatcher)
+            {
+                services.AddHostedService<BackgroundDispatcher>();
+            }
+            
             return services;
         }
     }

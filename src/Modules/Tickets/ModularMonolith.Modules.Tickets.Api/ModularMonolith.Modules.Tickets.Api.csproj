@@ -5,7 +5,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\ModularMonolith.Modules.Tickets.Core\ModularMonolith.Modules.Tickets.Core.csproj" />
+        <ProjectReference Include="..\..\..\Shared\ModularMonolith.Shared.Infrastructure\ModularMonolith.Shared.Infrastructure.csproj" />
+        <ProjectReference Include="..\ModularMonolith.Modules.Tickets.Core\ModularMonolith.Modules.Tickets.Core.csproj" />
     </ItemGroup>
 
 </Project>
