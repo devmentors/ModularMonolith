@@ -58,7 +58,7 @@ namespace ModularMonolith.Modules.Conferences.Core.Services
         public async Task UpdateAsync(ConferenceDetailsDto dto)
         {
             var conference = await GetConferenceAsync(dto.Id);
-            var hostId = conference.HostId;
+            var hostId = conference?.HostId;
             if (conference is null)
             {
                 throw new ConferenceNotFoundException(dto.Id);
