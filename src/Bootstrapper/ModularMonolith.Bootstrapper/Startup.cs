@@ -13,10 +13,10 @@ namespace ModularMonolith.Bootstrapper
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddInfrastructure();
             services.AddConferencesModule();
             services.AddSpeakersModule();
             services.AddTicketsModule();
+            services.AddInfrastructure();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

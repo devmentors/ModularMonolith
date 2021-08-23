@@ -6,6 +6,7 @@ using ModularMonolith.Shared.Infrastructure.Api;
 using ModularMonolith.Shared.Infrastructure.Events;
 using ModularMonolith.Shared.Infrastructure.Exceptions;
 using ModularMonolith.Shared.Infrastructure.Messaging;
+using ModularMonolith.Shared.Infrastructure.Modules;
 using ModularMonolith.Shared.Infrastructure.Postgres;
 
 [assembly:InternalsVisibleTo("ModularMonolith.Bootstrapper")]
@@ -25,7 +26,7 @@ namespace ModularMonolith.Shared.Infrastructure
             services.AddPostgres();
             services.AddEvents();
             services.AddMessaging();
-            
+            services.AddModuleRequests();
             return services;
         }
 
